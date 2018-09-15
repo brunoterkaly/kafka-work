@@ -24,9 +24,11 @@ chown -R kafka:nogroup /opt/kafka
 
 # Setup Kafka folders
 
+```
 mkdir /var/lib/kafka
 mkdir /var/lib/kafka/data
 chown –R kafka:nogroup /var/lib/kafka
+```
 
 # Fixup Kafka server properties
 
