@@ -1,3 +1,6 @@
+# Getting Started With Kafka (and Zookeeper)
+
+This is a getting started section.
 
 ## Add Kafka User
 
@@ -46,7 +49,11 @@ log.retention.bytes=104857600
 
 ```
 /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
+```
 
+## Test Zookeeper
+
+```
 telnet localhost 2181
 Ruok
 ```
@@ -80,5 +87,5 @@ Ruok
 ## Consume Messages
 
 ```
-/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
 ```
