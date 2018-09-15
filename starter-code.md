@@ -49,15 +49,40 @@ log.dirs=/var/lib/kafka/data
 log.retention.hours=168  
 log.retention.bytes=104857600
 ```
+# Start Zookeeper
 
+```
+/opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
+```
+
+# Start Kafka
 
 ```
 /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+```
 
-/opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+# Create a Topic
 
-/opt/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181
-/opt/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+```
+/opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka
+```
 
-/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+# List Topics
+
+```
+/opt/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181
+```
+
+# Produce Messages
+
+```
+/opt/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test-kafka
+
+> ENTER IN DATA
+```
+
+# Consume Messages
+
+```
+azureuser@myKafka:~$ /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
