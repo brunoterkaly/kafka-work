@@ -20,6 +20,7 @@ wget http://apache.claz.org/kafka/2.0.0/kafka_2.11-2.0.0.tgz
 ```
 mkdir /opt/kafka
 tar -xvzf kafka_2.11-2.0.0.tgz --directory /opt/kafka --strip-components 1
+cd /opt/kafka
 ln -s kafka_2.11-2.0.0/ kafka
 chown -R kafka:nogroup /opt/kafka
 ```
