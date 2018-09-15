@@ -84,5 +84,5 @@ log.retention.bytes=104857600
 # Consume Messages
 
 ```
-azureuser@myKafka:~$ /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
